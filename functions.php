@@ -3,6 +3,7 @@ add_shortcode('ajax_product_filter', function () {
     $terms = get_terms([
         'taxonomy'   => 'product_cat',
         'hide_empty' => true,
+	'parent'     => 0,    // ✅ Only parent categories
         'pad_counts' => true
     ]);
 
